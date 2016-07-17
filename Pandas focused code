@@ -1,0 +1,12 @@
+# sort the dataframe
+#me.sort(columns=['Chem_strat'], inplace=True)
+
+# set the index to be this and don't drop
+me.set_index(keys=['Chem_strat'], drop=False,inplace=True)
+
+# get a list of names
+#names=me['name'].unique().tolist()
+rocklist = me['Chem_strat'].unique().tolist()
+
+# now we can perform a lookup on a 'view' of the dataframe
+BFS = me.loc[me.Chem_strat=='Black Flag Sediments']
