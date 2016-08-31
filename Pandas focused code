@@ -10,3 +10,9 @@ rocklist = me['Chem_strat'].unique().tolist()
 
 # now we can perform a lookup on a 'view' of the dataframe
 BFS = me.loc[me.Chem_strat=='Black Flag Sediments']
+
+------------------------------------------------------------------
+Two ways of ammending column names
+
+log_concentrations.rename(columns=lambda x: x.replace('_gmean', '_logratio'), inplace=True)
+scistats.gmean(GMBE.ix[immobiles.str.replace('_gmean','_ratio')]['Ratio'])
