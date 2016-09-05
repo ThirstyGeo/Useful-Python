@@ -16,3 +16,7 @@ Two ways of ammending column names
 
 log_concentrations.rename(columns=lambda x: x.replace('_gmean', '_logratio'), inplace=True)
 scistats.gmean(GMBE.ix[immobiles.str.replace('_gmean','_ratio')]['Ratio'])
+-------------------------------------------------------------------
+#End a script:
+import sys
+sys.exit()
